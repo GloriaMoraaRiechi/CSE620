@@ -1,0 +1,24 @@
+#Write a code that takes any list of numbers and calculates and displays the mean, median, standard deviation, variance, range and interquartile range.
+
+import math
+import statistics
+import numpy as np
+
+listOfNumbers = input("Enter a list of numbers separated by spaces: ")
+
+def statisticsCD(listOfNumbers):
+	mean = statistics.mean(listOfNumbers)
+	median = statistics.median(listOfNumbers)
+	variance = statistics.variance(listOfNumbers)
+	std_dev = statistics.stdev(listOfNumbers)
+	value_range = max(listOfNumbers) - min(listOfNumbers)
+	interQR = np.percentile(listOfNumbers, 75) - np.percentile(listOfNumbers, 25)
+
+	print(f"Mean: {mean}")
+	print(f"Median: {median}")
+	print(f"Variance: {variance}")
+	print(f"Standard Deviation: {std_dev}")
+	print(f"Range: {value_range}")
+	print(f"Interquartile Range: {interQR}")
+
+statisticsCD(listOfNumbers)
