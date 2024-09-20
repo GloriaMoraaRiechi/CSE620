@@ -1,6 +1,4 @@
-		GLORIA MORAA RIECHI
-		     CSE 620
-		    09/20/2024
+GLORIA MORAA RIECHI		             CSE 620					 09/20/2024
 
 
 1. Make a code that takes any list of numbers and calculates and displays the mean, median, 
