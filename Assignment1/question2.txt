@@ -1,0 +1,60 @@
+2. Create a code using pseudocode that randomly generates passwords of
+   alternating letters and numbers of a user defined length
+
+START
+ //prompt the user to enter his/her desired length of the password
+ print "Enter the desired length of the password, should be greater than 4"       
+						       
+ //get input and store the desired length in the variable length
+ input length
+ 
+ //define a function that takes length as an argument
+ function passwordGenerator(length)
+ 
+ //Check if the length is greater than zero
+ if length < 5
+ 	print "The length of the password should be greater than 5"
+	return ""      //exists the function, returns an empty string
+		       //the pocess stops since the fucntion cannot 
+ 		       //generate a valid password if condition is not met
+ endif
+
+ //initialize password, an empty string variable that will store the generated password
+ set password = ""
+
+ //initialize the letters and numbers that will be used in generating the password
+ numbers = "0123456789"
+ letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+ letterslength = 52
+ numbersLength = 0
+ 
+ //initialize the indexes of the varibles letters and numbers that will be used to track
+ //the position of the letters and numbers being added to the password
+ indexL = 1
+ indexN = 1
+
+ //use a for loop that will continue generating the password as long as the length is 
+ //greater than 4 upto the desired length with which it will terminate
+ while length > 4
+    set index to random number between 0 and 51  //any index of the 52 letters is selected
+    add letters[index] to password               //character at selected index added to password
+    length = length - 1                          //decrease the length by one as one character has
+                                              	 //been added to the password
+ 
+    if length > 4 
+      set index to a random number between 0 and 9  //any index of the 10 numbers is selected
+      add numbers[index] to password                //number at selected index added to password
+      length = length - 1                           
+    endif 
+ endwhile
+
+ return password
+ 
+ end function
+
+END
+
+
+
+
+ 
