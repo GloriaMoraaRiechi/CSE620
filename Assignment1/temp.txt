@@ -1,0 +1,28 @@
+5. write a single function using pseudocode that takes an input temperature in celcius, 
+   converts it from celcius to fahrenheit,
+   celcius to kelvin and fahrenheit to kelvin and shows the result
+
+START
+  
+  //take the temperature in celcius, assign it to tempCelcius
+  tempCelcius = float(input("Enter the temperature in celcius: "))
+  print "Temperature in Celcius: " + tempCelcius
+
+
+  //the function takes tempCelcius as input
+  function convertTemp(tempCelcius)
+  	tempFahrenheit = (tempCelcius * 9/5 //convert to farhenheit from celcius
+	print "Temperature in fahreinheit:  " + tempFahrenheit
+
+	tempKelvin = tempCelcius + 273.15   //convert to kelvin from celcius
+	print "Temperature in Kelvin: " + tempKelvin
+
+	//Converting from fahrenheit to kelvin
+	kelvinFromFahrenheit = ((tempFahrenheit - 32) * 5/9) + 273.15
+	print "Temperature in kelvin from fahrenheit: " + kelvinFromFahrenheit
+
+  end function
+
+  convertTemp(tempCelcius)                //call the function
+
+END

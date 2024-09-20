@@ -1,0 +1,31 @@
+4. Write a function using pseudocode that computes the list of the first
+   100 fibonacci numbers.
+
+START
+ //Create a function that returns a list of the first 100 fibonacci numbers 
+ function cumputeFibonacci()
+ 	//initialize an empty list that stores the first fibonacci numbers
+	fibList = []
+  	
+	//add 0 and 1 the first and second numbers to the list
+        firstNumber = 0
+	secondNumber = 0
+  	append firstNumber to fibList
+	append secondNumber to fiblist
+
+	//iterates from 3 to 100, generating the next 98 fibonacci numbers
+	for number = 3 to 100
+		nextNumber = firstNumber + secondNumber
+		append nextnumber to fibList
+  		
+	//update firstNumber and secondNumber to the most recent numbers
+	firstNumber = secondNumber
+	secondNumber = nextNumber
+        
+	end for
+	
+	print fibList
+  end function
+  
+  //call the function
+  computeFibonacci()      
