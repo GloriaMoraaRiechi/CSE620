@@ -3,15 +3,23 @@ standard deviation, variance, range and interquartile range. (Pesudocode, withou
 
 START
 
-  Print "Enter a list of numbers separated by spaces"    //Gives instructions to the user on how the numbers should appear
+  Print "Enter a list of numbers separated by spaces"    //Gives instructions to the user
   Input list                                             //Allows the user to enter a list of numbers
  
-  Initialize count to zero                               //Count is set to zero and will be used to keep track of the number of elements in the list
-  initialize index to zero                               //Index is set to zero and will be used to iterate through the list
-  Initialize maxNumber to list[0]                        //The maximum number in the list is first initialized to the first element in the list
-  Initialize minNumber to list[0]                        //The minimum number in the list is first initialized to the first element in the list
+  Initialize count to zero                               //Count is set to zero and will be used to keep 
+							 //track of the number of elements in the list
 
-  While list[index] exists                               //Loops through the list to check if index exists, if it exists, it updates the value of count and 
+  initialize index to zero                               //Index is set to zero and will be used to iterate
+							 //through the list
+
+  Initialize maxNumber to list[0]                        //The maximum number in the list is first initialized to 
+							 //the first element in the list
+
+  Initialize minNumber to list[0]                        //The minimum number in the list is first initialized to 
+							 //the first element in the list
+
+  While list[index] exists                               //Loops through the list to check if index exists, 
+							 //if it exists, it updates the value of count and 
                                                          //index by incrementing each by one
   	count = count + 1
 	index = index + 1
@@ -32,12 +40,13 @@ START
   Print "The median of the numbers in the list is", median   
 
 
-  //CALCULATING THE VARIANCE: obtained by finding the deviation of each number from the mean, adding all the deviations and 
-  //then finding the square of the total of the deviations which is divided by the total number of elements in the list
+  //CALCULATING THE VARIANCE: obtained by finding the deviation of each number from the mean, 
+  //adding all the deviations and then finding the square of the total of the deviations which is 
+  //divided by the total number of elements in the list
 
   Initialize sumV to zero                                   //Initializes the sum of the deviations to zero
   For each number in list: 
-	sumV = sumV + (number-mean)^2                       //Updates the value of the total that will be used to calculate the variance
+	sumV = sumV + (number-mean)^2                       //Updates the value of the sumV
   variance = sumV/count
   Print "The variance of the numbers in the list is:", variance
   
@@ -50,11 +59,16 @@ START
   //FINDING THE RANGE
   //Iterate through the list to find the maximum and minimum numbers in the list
   Initialize index to 1                                //Starts from the second element in the list
-  If list[] > maxNumber                                //Checks if the current number is greater than the previous element which we initlized to be the
+  If list[] > maxNumber                                //Checks if the current number is greater than the previous 
+						       //element which was initializzed to be the
                                                        //the first element in the list
+
 	set maxNumber to list[index]                   //Updates the maxNumber if the condition is met
-  If list[index] < minNumber                           //Checks if the current number is less than the previous element which we initally set to be the
+
+  If list[index] < minNumber                           //Checks if the current number is less than the previous element
+       						       //which was initally set to be the
                                                        //the first element in the list
+
 	set nimNumber to list[index]                   //Updates the minNumber if the condition is met
   index = index + 1
   
@@ -75,4 +89,6 @@ START
 END
   
 	                       
+
+
 
