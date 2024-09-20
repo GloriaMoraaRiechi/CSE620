@@ -2,11 +2,11 @@
 
 START
 
-  Print "Enter a list of numbers separated by spaces"    //Gives instructions to the use on how the numbers should appear
+  Print "Enter a list of numbers separated by spaces"    //Gives instructions to the user on how the numbers should appear
   Input list                                             //Allows the user to enter a list of numbers
  
   Initialize count to zero                               //Count is set to zero and will be used to keep track of the number of elements in the list
-  initialize index to zero                               //Index is first set to zero and will be used to iterate through the list
+  initialize index to zero                               //Index is set to zero and will be used to iterate through the list
   Initialize maxNumber to list[0]                        //The maximum number in the list is first initialized to the first element in the list
   Initialize minNumber to list[0]                        //The minimum number in the list is first initialized to the first element in the list
 
@@ -17,49 +17,47 @@ START
   Sort list in ascending order 
 
   //CALCULATING THE MEAN
-  
   Initialize sum to zero
   for each number in list:
   	sum = sum + number
   mean = sum / count
   Print "The mean of the numbers in the list is", mean  
 
-
   //FINDING THE MEDIAN
   If count is odd
-	initialize median to the middle element
+	median is the middle element
   Else
-	initialize median to the average of the two middle elements
+	median is the average of the two middle elements
   Print "The median of the numbers in the list is", median   
 
 
   //CALCULATING THE VARIANCE: obtained by finding the deviation of each number from the mean, adding all the deviations and 
   //then finding the square of the total of the deviations which is divided by the total number of elements in the list
 
-  Initialize sumV to zero                              //Initializes the sum of the deviations to zero
+  Initialize sumV to zero                                   //Initializes the sum of the deviations to zero
   For each number in list: 
-	sumV = sumV + (number-mean)^2                  //Updates the value of the total that will be used to calculate the variance
-  Initialize variance to sumV/count
+	sumV = sumV + (number-mean)^2                       //Updates the value of the total that will be used to calculate the variance
+  variance = sumV/count
   Print "The variance of the numbers in the list is:", variance
   
 
-  //CALCULATING THE STANDARD DEVIATION
-  Initialize the std to variance^0.5
+  //CALCULATING THE STANDARD DEVIATION (This is the square root of the variance obtained above)
+  std = variance^0.5
   Print "The standard deviation of the numbers in the list is:", std
 
 
   //FINDING THE RANGE
-  //Iterate through the lsit to find the maximum and minimum numbers in the list
+  //Iterate through the list to find the maximum and minimum numbers in the list
   Initialize index to 1                                //Starts from the second element in the list
   If list[] > maxNumber                                //Checks if the current number is greater than the previous element which we initlized to be the
                                                        //the first element in the list
 	set maxNumber to list[index]                   //Updates the maxNumber if the condition is met
-  If list[index] < minNumber                           //Checks if the current number if less than the previous element which we initally set to be the
+  If list[index] < minNumber                           //Checks if the current number is less than the previous element which we initally set to be the
                                                        //the first element in the list
 	set nimNumber to list[index]                   //Updates the minNumber if the condition is met
   index = index + 1
   
-  Initialize range to maxNumber - minNumber
+  range = maxNumber - minNumber
   Print "The range of the mumbers in the list is", range
 
 
@@ -70,7 +68,7 @@ START
   Initialize Q3Index to (count+1)1*0.75               //Calculates the index for the 75th percentile
   Initalize Q3 to the element at the Q3Index
 
-  Initialize interquartileRange to Q3-Q1
+  interquartileRange = Q3-Q1
   Print "The interquartile range is:, interquartileRange
 
 END
