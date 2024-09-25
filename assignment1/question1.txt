@@ -15,11 +15,11 @@ START
   initialize index to zero                               //Index is set to zero and will be used to iterate
 							 //through the list
 
-  Initialize maxNumber to list[0]                        //The maximum number in the list is first initialized to 
-							 //the first element in the list
+  Initialize maxNumber to list[0]                        //The maximum number in the list is first set to 
+							 //be the first element in the list
 
-  Initialize minNumber to list[0]                        //The minimum number in the list is first initialized to 
-							 //the first element in the list
+  Initialize minNumber to list[0]                        //The minimum number in the list is first set to 
+							 //be the first element in the list
 
   While list[index] exists                               //Loops through the list to check if index exists, 
 							 //if it exists, it updates the value of count and 
@@ -27,10 +27,11 @@ START
   	count = count + 1
 	index = index + 1
   Sort list in ascending order 
+  Endwhile
 
-  //CALCULATING THE MEAN
+  //CALCULATING THE MEAN (Given by sum divided by the number of elements in the list)
   Initialize sum to zero
-  for each number in list:
+  For each number in list:
   	sum = sum + number
   mean = sum / count
   Print "The mean of the numbers in the list is", mean  
@@ -41,7 +42,7 @@ START
   Else
 	median is the average of the two middle elements
   Print "The median of the numbers in the list is", median   
-
+  Endif
 
   //CALCULATING THE VARIANCE: obtained by finding the deviation of each number from the mean, 
   //adding all the deviations and then finding the square of the total of the deviations which is 
@@ -52,7 +53,7 @@ START
 	sumV = sumV + (number-mean)^2                       //Updates the value of the sumV
   variance = sumV/count
   Print "The variance of the numbers in the list is:", variance
-  
+  Endfor
 
   //CALCULATING THE STANDARD DEVIATION (This is the square root of the variance obtained above)
   std = variance^0.5
@@ -62,18 +63,20 @@ START
   //FINDING THE RANGE
   //Iterate through the list to find the maximum and minimum numbers in the list
   Initialize index to 1                                //Starts from the second element in the list
-  If list[] > maxNumber                                //Checks if the current number is greater than the previous 
-						       //element which was initializzed to be the
+  If list[] > maxNumber                                //Checks if the current number is greater than the 
+						       //previous element which was initializzed to be the
                                                        //the first element in the list
 
 	set maxNumber to list[index]                   //Updates the maxNumber if the condition is met
+  Endif
 
-  If list[index] < minNumber                           //Checks if the current number is less than the previous element
-       						       //which was initally set to be the
+  If list[index] < minNumber                           //Checks if the current number is less than the previous
+       						       //element which was initally set to be the
                                                        //the first element in the list
 
 	set nimNumber to list[index]                   //Updates the minNumber if the condition is met
   index = index + 1
+  Endif
   
   range = maxNumber - minNumber
   Print "The range of the mumbers in the list is", range
