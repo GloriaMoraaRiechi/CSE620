@@ -48,9 +48,9 @@ START
   //adding all the deviations and then finding the square of the total of the deviations which is 
   //divided by the total number of elements in the list
 
-  Initialize sumV to zero                                   //Initializes the sum of the deviations to zero
+  Initialize sumV to zero                            //Initializes the sum of the deviations to zero
   For each number in list: 
-	sumV = sumV + (number-mean)^2                       //Updates the value of the sumV
+	sumV = sumV + (number-mean)^2                //Updates the value of the sumV
   variance = sumV/count
   Print "The variance of the numbers in the list is:", variance
   Endfor
@@ -70,8 +70,8 @@ START
 	set maxNumber to list[index]                   //Updates the maxNumber if the condition is met
   Endif
 
-  If list[index] < minNumber                           //Checks if the current number is less than the previous
-       						       //element which was initally set to be the
+  If list[index] < minNumber                           //Checks if the current number is less than the
+       						       //previous element which was set to be the
                                                        //the first element in the list
 
 	set nimNumber to list[index]                   //Updates the minNumber if the condition is met
