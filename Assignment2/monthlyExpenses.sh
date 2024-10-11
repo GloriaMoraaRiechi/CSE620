@@ -48,9 +48,9 @@ compareAverage(){
     esac
 
     if [[ $TOTALEXPENSES -gt avgExpenses ]] ; then
-        echo "Your expenses exceed the average for a family of size $family_size in 2022."
+        echo "Your expenses exceed the average for a family of size $familySize in 2022."
     else
-        echo "Your expenses are below the average for a family of size $family_size in 2022."
+        echo "Your expenses are below the average for a family of size $familySize in 2022."
     fi
 }
 compareAverage $familySize $TOTALEXPENSES
